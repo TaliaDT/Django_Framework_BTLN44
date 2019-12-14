@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    {% load staticfiles %}
+    <title>{% block title %}{% endblock %}</title>
+	<link rel="stylesheet" href="{% static 'css/psd2.css' %}">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<!------------------------header-------------------------------->
+	<header>
+		<div class="menutop">
+			<a href="#">Sign in</a>
+			<a href="#">Order Status</a>
+			<a href="#">My Account</a>
+			<a href="#">Help</a>
+		</div>
+		<div class="baner">
+			<!---<div style="height: 70px; line-height: 70px;">
+				<div class="logo">
+				<div><span>ONLINE</span></div>
+			</div>-->
+			<div class="logo">
+				<img src="{% static 'images/logo.png' %}">
+				<span>ONLINE</span>
+			</div>
+			<div class="tim_kiem">
+					<input type="input" name="search">
+				<div class="icon_timkiem">
+					<i class="fa fa-search"></i>
+					<button>Search</button>
+				</div>
+			</div>
+			<div class="header_right">
+				<div class="header_r_l">
+					<div class="hdr_row1">
+						<a href="#">
+							<img src="{% static 'images/cart1.png' %}">
+							<div class="text_a">
+								<span class="a1">Your cart</span>
+								<span class="a2">(2items)</span>
+							</div>
+						</a>
+					</div>
+					<div class="hdr_row2">
+						<span class="">$125.0</span>
+						<button type="button">Checkout</button>
+					</div>
+				</div>
+				<!----------------------------->
+				<div class="header_r_r">
+					<div class="logo_sao">
+						<img src="{% static 'images/sao.png' %}" alt="">
+					</div>
+					<div class="sao_20">
+						<span>20</span>
+					</div>
+					<div class="text_rr">
+						<span>Wish list</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!------------------------end-header---------------------------->
+	<menu>
+		<ul>
+			<li><a href="#">Computers</a></li>
+			<li><a href="#">Cooking</a></li>
+			<li><a href="#">Education</a></li>
+			<li><a href="#">Fiction</a></li>
+			<li><a href="#">Health</a></li>
+			<li><a href="#">Mathematics</a></li>
+			<li><a href="#">Medical</a></li>
+			<li><a href="#">Reference</a></li>
+			<li><a href="#">Science</a></li>
+		</ul>
+	</menu>
+	<!------------------------end-menu------------------------------>
+	<div class="content">
+		<div class="menu_left">
+			<div class="title_menuleft">
+				<span>Categories</span>
+			</div>
+			<ul>
+				<li>
+					<div class="title_all">
+						<a href="#">All</a>
+					</div>
+					<ul>
+						<li class="title_ul">
+							<div class="title_li">
+								<a href="#">Fiction & Literature</a>
+							</div>
+							<ul>
+								<li><a href="#">Children</a></li>
+								<li><a href="#">Science</a></li>
+								<li><a href="#">Fantasy</a></li>
+								<li><a href="#">Mystery</a></li>
+								<li><a href="#">Romance</a></li>
+								<li><a href="#">Horror</a></li>
+								<li><a href="#">Poetry</a></li>
+								<li><a href="#">Literature</a></li>
+								<li><a href="#">Crime</a></li>
+							</ul>
+						</li>
+						<!--------->
+						<li class="title_ul">
+							<div class="title_li">
+								<a href="#">Non - Fiction</a>
+							</div>
+							<ul>
+								<li class="title_ul"><a href="#">Comic</a></li>
+								<li><a href="#">Cook</a></li>
+								<li><a href="#">Psychology</a></li>
+								<li><a href="#">Medical</a></li>
+								<li><a href="#">Art</a></li>
+								<li><a href="#">Photography</a></li>
+								<li><a href="#">Law</a></li>
+								<li><a href="#">History</a></li>
+								<li><a href="#">Business</a></li>
+								<li><a href="#">Computer</a></li>
+							</ul>
+						</li>
+						<!--------->
+						<li class="title_ul">
+							<div class="title_li">
+								<a href="#">Other</a>
+							</div>
+							<ul>
+								<li class="title_ul"><a href="#">Baby</a></li>
+								<li><a href="#">Sex</a></li>
+								<li><a href="#">Travel</a></li>
+								<li><a href="#">Science</a></li>
+								<li style="border: 0;"><a href="#">Sports</a></li>
+							</ul>
+						</li>
+						<!--------->
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!---------------------end_menu_left------------->
+        {% block content %}
+                
+        {% endblock %}
+		
+			<!------------------------------------------end_menuright_-------->
+	</div>
+	<!------------------------end-contet---------------------------->
+	<!---foooter----->
+	<div class="foooter">
+		<div class="foooter_top">
+			<div class="col_footer">
+				<span>Biography & True Stories</span>
+				    <a href="#">General</a>
+    				<a href="#">Diaries, Letters & Journals</a>
+				    <a href="#">Memoirs</a>
+				    <a href="#">True Stories</a>
+				    <a href="#">Generic Exams</a>
+				    <a href="#">GK Titles</a>
+				    <a href="#">Medical Entrance</a>
+				    <a href="#">Other Entrance Exams</a>
+				    <a href="#">PG Entrance Examinations</a>
+				    <a href="#">Self-help Titles</a>
+				    <a href="#" style="border: 0;">Sociology</a>
+			</div>
+			<div class="col_footer">
+				<span>Professional & Reference </span>
+					<a href="#">Academic and Reference</a>
+				    <a href="#">Business Trade</a>
+				    <a href="#">Engineering and Computer Science</a>
+				    <a href="#">Humanities, Social Sciences and Languages</a>
+				    <a href="#">Introduction to Computers</a>
+				    <a href="#">Science and Maths</a>
+				    <a href="#">Trade Business</a>
+				    <a href="#">English Language & Literature</a>
+				    <a href="#">English Language Teaching</a>
+				    <a href="#">Environment Awareness</a>
+				    <a href="#" style="border: 0;">Environment Protection</a>
+			</div>
+			<div class="col_footer">
+				<span>Earth Sciences</span>
+					<a href="#">Earth Sciences</a>
+					<a href="#">Geography</a>
+					<a href="#">The Environment</a>
+					<a href="#">Regional & Area Planning</a>
+					<a href="#">Fantasy</a>
+					<a href="#">Gay</a>
+					<a href="#">Humorous</a>
+					<a href="#">Interactive</a>
+					<a href="#">Legal</a>
+					<a href="#">Lesbian</a>
+					<a href="#">Men'S Adventure</a>
+					<a href="#" style="border: 0;">Movie Or Television Tie-In</a>
+			</div>
+			<div class="col_footer" style="margin-right: 0;">
+				<span>Mathematics</span>
+				    <a href="#">Algebra</a>
+					<a href="#">Differential Equations</a>
+					<a href="#">Discrete Mathematics</a>
+					<a href="#">Fourier Analysis</a>
+					<a href="#">Numerical Analysis</a>
+					<a href="#">Probability</a>
+					<a href="#">Statistical Methods/data Analysis</a>
+					<a href="#">Stochastic And Random Processes</a>
+					<a href="#">Topology</a>
+					<a href="#">Statistics</a>
+					<a href="#" style="border: 0;">Mathematics</a>
+			</div>
+		</div>
+		<!----------------------------------------->
+		<div class="footer_bootom">
+			<div class="ft_text">We accept all major <a href="#">Credit Card</a>/<a href="#">Debit Card</a>/<a href="#">Internet Banking</a></div>
+			<div class="logo_footer">
+				<a href="#" class="logo_ft"><img src="{% static 'images/logo_ft1.png' %}"></a>
+				<a href="#" class="logo_ft"><img src="{% static 'images/logo_ft2.png' %}"></a>
+				<a href="#" class="logo_ft"><img src="{% static 'images/logo_ft3.png' %}"></a>
+			</div>
+			<div class="ft_text2">Conditions of Use Privacy Notice Interest-ased Ads © 1996-2013, Booksonline, Inc. or its affiliates</div>
+		</div>
+		<!---------------------------------------->
+	</div>
+	<!------end--------->
+</body>
+</body>
+</html>

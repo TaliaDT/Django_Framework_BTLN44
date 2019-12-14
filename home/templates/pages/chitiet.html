@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% extends "pages/base.html" %}
+
+{% block title %}{{chitiet.tieude}}{% endblock %}
+{% block content %}
+    <div class="menu_right">
+        <div class="title_content">
+            <span>Chi Tiết Sản Phẩm<span>
+        </div>
+        <div class="row" style="padding: 20px;">
+            <div class = "col-4">
+                <img src = "{{chitiet.anh.url}}" style="width: 100%;"  />
+            </div>
+            <div class = "col-8">
+                <h3 style="font-family: segoeuil;"><a href = '#'>{{chitiet.tieude}}</a></h3>
+                <p > {{chitiet.noidung}} </p>
+                <div>
+                    <div class="d-flex justify-content-between">
+                        <div style="font-size: 30px; color: #cc0000; font-weight: bold;">
+                            <span class="giasp" style="font-family: segoeuil; color: #0099ff; font-weight: 400;" >Giá bán: </span> ${{chitiet.gia}}
+                        </div>
+                        <div style="background-color: #79b260; color: #fff; font-weight: 700; font-size: 24px; ">
+                            <span style="padding: 0 20px;">Thêm giỏ hàng</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {% comment %} <h3><a href = '{{ct.id}}'>{{ct.title}}</a></h3>
+    <img src = "{{ct.image.url}}" with="500px" height="300px" />
+    <h6>on {{ct.date}}</h6>
+    {{ct.body|safe|linebreaks}} {% endcomment %}
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "pages/base.html" %}
+{% load staticfiles %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="menu_right">
+    <div class="title_content">
+        <span>Sản phẩm bán chạy<span>
+    </div>
+    <div class="products">
+        {%for sp in sanpham %}
+            <a href="home/{{sp.id}}" class="col">
+                <div class="anh" >
+                    <img src="{{sp.anh.url}}" alt="" width="100%">
+                </div>
+                <div class="chu_thich">
+                    <span>{{sp.tieude}}</span>
+                    <p>{{sp.gia}}đ</p>
+                </div>
+            </a>
+        {% endfor %}
+        
+    </div>
+    
+</div> 
+    
+
+{% endblock %}
